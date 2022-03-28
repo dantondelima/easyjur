@@ -31,27 +31,6 @@ abstract class AbstractRepository implements RepositoryInterface
     }
 
     /**
-     * Find one register or fail
-     *
-     * @paran int $id
-     * @return array
-     */
-    public function findOrFail(int $id): Collection
-    {
-        return $this->model::findOrFail($id);
-    }
-
-    /**
-     * Find first register
-     *
-     * @return array
-     */
-    public function first(): Collection
-    {
-        return $this->model::first();
-    }
-
-    /**
      * Get all registers
      *
      * @return array

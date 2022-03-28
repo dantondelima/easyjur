@@ -31,27 +31,6 @@ class AbstractService implements ServiceInterface
     }
 
     /**
-     * Find one register or fail
-     *
-     * @param int $id
-     * @return array
-     */
-    public function findOrFail(int $id): Collection
-    {
-        return $this->repository->findOrFail($id);
-    }
-
-    /**
-     * Find first register
-     *
-     * @return array
-     */
-    public function first(): Collection
-    {
-        return $this->repository->first();
-    }
-
-    /**
      * Get all registers
      *
      * @return array
@@ -62,23 +41,12 @@ class AbstractService implements ServiceInterface
     }
 
     /**
-     * Get with paginate
-     *
-     * @param $limit
-     * @return array
-     */
-    public function paginate($limit = 10): Collection
-    {
-        return $this->repository->paginate($limit);
-    }
-
-    /**
      * Create new register
      *
      * @param array $data
      * @return array
      */
-    public function create(array $data): bool | Model
+    public function create(array $data): bool|Model
     {
         return $this->repository->create($data);
     }

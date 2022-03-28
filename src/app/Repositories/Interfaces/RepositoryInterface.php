@@ -9,13 +9,9 @@ interface RepositoryInterface
 {
     public function find(int $id): Model;
 
-    public function findOrFail(int $id): Collection;
-
-    public function first(): Collection;
+    public function findOrFail(int $id): Model;
 
     public function all(): Collection;
-
-    public function paginate($limit = 10): Collection;
 
     public function create(array $data): Model;
 
