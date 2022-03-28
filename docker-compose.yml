@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql
+    container_name: database
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: easyjur
+      MYSQL_DATABASE: easyjur
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_PASSWORD: secret
+    ports:
+      - '3366:3366'
+  php-apache:
+    container_name: php-apache
+    build:
+      context: ./php
+    ports:
+        - '8888:80'
+    volumes:
+      - ./src:/var/www/easyjur
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    depends_on:
+      - database
