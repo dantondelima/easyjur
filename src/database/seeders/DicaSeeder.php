@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Dica;
 use Illuminate\Database\Seeder;
 
 class DicaSeeder extends Seeder
@@ -13,6 +14,6 @@ class DicaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Dica::factory()->times(15)->create();
     }
 }

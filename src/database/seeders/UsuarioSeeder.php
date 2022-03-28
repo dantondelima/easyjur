@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Usuario;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -20,5 +21,6 @@ class UsuarioSeeder extends Seeder
             'email' => 'usuario@easyjur.com',
             'password' => Hash::make('easyjur'),
         ]);
+        Usuario::factory()->times(8)->create();
     }
 }

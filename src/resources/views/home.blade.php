@@ -45,19 +45,9 @@
                                                 @if($dica->versao != "")
                                                     <div class="text-sm-left font-weight-bold text-gray-800">{{ $dica->marca }}</div>
                                                 @endif
-                                                <div class="row mt-4">
-                                                    <div class="col-4">
+                                                <div class="row mt-4 justify-content-center">
+                                                    <div class="col-8">
                                                         <a role="button" href="{{ route('dicas.show', ['dica' => $dica->id])}}" class="btn btn-primary btn-user btn-block"> <i class="fa fa-eye"></i> </a>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a role="button" href="{{ route('dicas.edit', ['dica' => $dica->id])}}" class="btn btn-primary btn-user btn-block"> <i class="fa fa-edit"></i> </a>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <form action="{{ route("dicas.destroy", ['dica' => $dica->id])}}" method="POST">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger btn-user btn-block classe-deletar"><i class="fa fa-trash"></i> </button>
-                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>

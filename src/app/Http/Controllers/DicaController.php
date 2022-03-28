@@ -31,14 +31,14 @@ class DicaController extends Controller
     public function home(Request $request)
     {
         $veiculos = $this->veiculoService->all();
-        $dicas = $this->dicaService->allFilter($request->busca, $this->searchFields, $request->tipo, 1, null);
+        $dicas = $this->dicaService->allFilter($request->busca, $this->searchFields, $request->tipo, 6, null);
         return view('home')->with(['veiculos' => $veiculos, 'dicas' => $dicas, 'request' => $request->all()]);
     }
 
     public function index(Request $request)
     {
         $veiculos = $this->veiculoService->all();
-        $dicas = $this->dicaService->allFilter($request->busca, $this->searchFields, $request->tipo, 1, Auth::guard('usuario')->user()->id);
+        $dicas = $this->dicaService->allFilter($request->busca, $this->searchFields, $request->tipo, 6, Auth::guard('usuario')->user()->id);
         return view('minhas-dicas')->with(['veiculos' => $veiculos, 'dicas' => $dicas, 'request' => $request->all()]);
     }
 

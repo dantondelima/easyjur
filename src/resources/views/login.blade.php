@@ -43,7 +43,7 @@
                                 <div class="col-lg-11">
                                     <div class="form-group">
                                         <label class="form-control-label" for="email">Email<span class="small text-danger">*</span></label>
-                                        <input type="email" id="email" class="form-control" required name="email" placeholder="easyjur@easyjur.com" value="{{ old('nome') }}">
+                                        <input type="email" id="email" class="form-control" required name="email" placeholder="usuario@easyjur.com" value="{{ old('email') }}">
                                     </div>
                                 </div>
                             </div>
