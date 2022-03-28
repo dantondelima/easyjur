@@ -9,7 +9,7 @@ class DicaRepository extends AbstractRepository implements DicaRepositoryInterfa
 {
     public function allFilter(string|null $search = '', array $searchFields, int|null $tipo = null, int $limit = 6, int|null $usuario = null): mixed
     {
-        $results = $this->model::with('veiculo')->where(function ($query) use ($searchFields, $search){
+        $results = $this->model::with('veiculo')->orderby('id', 'desc')->where(function ($query) use ($searchFields, $search){
             $query->where($searchFields[0], 'like', '%' . $search . '%');
             if (count($searchFields) > 1 && $search != '') {
                 foreach ($searchFields as $field) {
