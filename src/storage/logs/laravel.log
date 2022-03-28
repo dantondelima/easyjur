@@ -13156,3 +13156,7 @@ Did you mean one of these?
 #46 /var/www/easyjur/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #47 {main}
 "} 
+[2022-03-28 02:30:07] local.ERROR: Class App\Repositories\VeiculoRepository contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Repositories\Interfaces\RepositoryInterface::findOrFail) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Class App\\Repositories\\VeiculoRepository contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Repositories\\Interfaces\\RepositoryInterface::findOrFail) at /var/www/easyjur/app/Repositories/VeiculoRepository.php:7)
+[stacktrace]
+#0 {main}
+"} 

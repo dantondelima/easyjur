@@ -9,8 +9,6 @@ interface RepositoryInterface
 {
     public function find(int $id): Model;
 
-    public function findOrFail(int $id): Model;
-
     public function all(): Collection;
 
     public function create(array $data): Model;
