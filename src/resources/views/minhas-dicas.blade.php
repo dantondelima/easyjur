@@ -4,7 +4,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Minhas dicas</h1>
-
+    @include('inc.feedback')
     <div class="row justify-content-center">
 
         <div class="col-lg-10 order-lg-1">

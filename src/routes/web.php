@@ -18,7 +18,7 @@ Route::group(['middleware' => 'usuario'], function () {
     Route::get('/perfil', [UsuarioController::class, 'edit'])->name('usuario.edit');
     Route::put('/perfil/{usuario}', [UsuarioController::class, 'update'])->name('usuario.update');
 
-    Route::resource('dicas', 'DicaController');
+    Route::resource('dicas', 'DicaController')->middleware('usuarioPermissao');
 });
 
 

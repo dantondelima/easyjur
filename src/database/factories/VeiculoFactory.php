@@ -14,7 +14,7 @@ class VeiculoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => "Moto",
         ];
     }
 }
